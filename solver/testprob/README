@@ -1,0 +1,21 @@
+This directory contains few benchmark SDP instances provided in SDPA sparse format.
+
+Both 'control10' and 'theta5' instances are taken from SDPLIB set. 
+
+Instances 'test2-200' and 'test17poly-200' are newly generated and come from 
+polynimial optimization. These are saved in a STANDARD SDPA sparse format. 
+
+We also added here instances 'test2-200r' and 'test17poly-200r', which are 
+the same problems as 'test2-200' and 'test17poly-200', but saved in a MODIFIED
+SDPA sparse format. The reason for this is that these 2 problems have rank-one
+structures in their constrain matrices, which PCSDP can exploit.  
+
+IMPORTANT! In order to solve problem 'test2-200r' the parameter 'rank1' in param.pcsdp
+file should be set to '2', i.e., 'rank1=2'. In the case of 'test17poly-200r' the user
+should use 'rank1=1'. For the rest of the problems in this directory 'rank1=0', should
+be used (this is the default mode). 
+ 
+See the User's Guide in the doc directory for more details.
+
+
+
